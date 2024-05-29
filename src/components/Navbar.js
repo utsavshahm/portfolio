@@ -75,6 +75,7 @@ function Navbar() {
         height={75}
         boxShadow={2}
         backgroundColor={"rgba(255, 255, 255, 1)"}
+        // position={"fixed"}
       >
         <Stack
           alignItems={"center"}
