@@ -1,5 +1,4 @@
 import styled from "@emotion/styled/macro";
-import { keyframes } from "@mui/material";
 import React from "react";
 import { Button } from "@mui/material";
 
@@ -9,6 +8,7 @@ const Btn = styled(Button)`
   text-transform: none;
   color: black;
   font-size: 1.1rem;
+  width: fit-content;
   padding: 10px 20px;
   border: 0.5px solid black;
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
@@ -34,9 +34,13 @@ const Btn = styled(Button)`
     color: white;
     border-color : transparent;
   }
+
+  @media (max-width: 920px) {
+    font-size : 1rem;
+  }
 `;
 function SubmitButton(props) {
-  return <Btn variant="outlined">{props.children}</Btn>;
+  return <Btn variant="outlined" className={props.className}>{props.children}</Btn>;
 }
 
 export default SubmitButton;

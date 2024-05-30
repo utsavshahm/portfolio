@@ -1,5 +1,5 @@
 import styled from "@emotion/styled/macro";
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import {  IconButton, Stack } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Close, Menu } from "@mui/icons-material";
@@ -59,7 +59,7 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (size <= 900) {
+    if (size <= 920) {
       // Compare with a number, not a string
       setHam(1);
     } else {
@@ -75,6 +75,9 @@ function Navbar() {
         height={75}
         boxShadow={2}
         backgroundColor={"rgba(255, 255, 255, 1)"}
+        position={"fixed"}
+        top={0}
+        width={"100%"}
         // position={"fixed"}
       >
         <Stack

@@ -32,9 +32,10 @@ function Dropdown(props) {
         width="100%"
         height="30vh"
         gap={3}
+        marginTop={10}
         fontSize={20}
-        position={"absolute"}
-        backgroundColor={'rgba(255, 255, 255, 0.8)'}
+        position={"fixed"}
+        backgroundColor={'rgba(255, 255, 255, 0.95)'}
         boxShadow={1}
         className={animationClass}
         onAnimationEnd={handleAnimationEnd}
