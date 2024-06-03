@@ -22,7 +22,7 @@ const Btn = styled(Button)`
     border-radius: 15px;
     background: linear-gradient(to right, red, orange);
     width: 0;
-    z-index: -1;
+    z-index: -100;
     transition: width 0.3s ease-in-out;
   }
 

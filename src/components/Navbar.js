@@ -78,7 +78,7 @@ function Navbar() {
         position={"fixed"}
         top={0}
         width={"100%"}
-        // position={"fixed"}
+        zIndex={1}
       >
         <Stack
           alignItems={"center"}
@@ -86,7 +86,7 @@ function Navbar() {
           fontSize={30}
           sx={{ wordSpacing: 2 }}
         >
-          <Link to={'/'} style={{textDecoration : "none", color:'black'}}>
+          <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
             <b>Utsav</b> <span style={{ fontWeight: 300 }}> Shah </span>
           </Link>
         </Stack>
@@ -99,7 +99,8 @@ function Navbar() {
           display={ham ? "none" : "flex"}
         >
           <NavLink> Home </NavLink>
-          <NavLink> About </NavLink>
+          <NavLink to={"#about"}> About </NavLink>
+          <NavLink> Experience </NavLink>
           <NavLink> Projects </NavLink>
           <NavLink> Contact </NavLink>
         </Stack>
@@ -120,7 +121,8 @@ function Navbar() {
 
       <DropdownMenu state={menu}>
         <NavLink> Home </NavLink>
-        <NavLink> About </NavLink>
+        <NavLink to={"#about"}> About </NavLink>
+        <NavLink> Experience </NavLink>
         <NavLink> Projects </NavLink>
         <NavLink> Contact </NavLink>
       </DropdownMenu>

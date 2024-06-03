@@ -17,7 +17,7 @@ function Home() {
   return (
     <Box
       id="#hero-section"
-      sx={{ height: "85vh" }}
+      sx={{ height: "100vh" }}
       display={"flex"}
       alignItems={"center"}
       justifyContent={"space-around"}
