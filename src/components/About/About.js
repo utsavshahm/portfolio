@@ -36,43 +36,61 @@ const cardStyles = {
 
   "&::after":{
     "content": `""`, 
-    "height": "100%", 
+    "height": "0", 
     "width": "100%",
-    "top": 0,
-    "opacity" : 0,
+    "bottom": 0,
+    "opacity": 0,
+    "left" : 0,
     "position": "absolute", 
     "background": "rgb(0, 0, 0, 0.6)",
-    "transition" : "all ease-in 0.3s"
+    "transition": "all ease-in 0.3s", 
+    "border-radius" : "10px"
   }, 
   "&:hover::after": {
-    "opacity" : "1"
+    "opacity": "1",
+    "height": "100%", 
+    "top": 0,
   }
 }
 export default function About() {
+    const [size, setSize] = useState(window.innerWidth);
 
+    React.useEffect(() => {
+      const handleResize = () => {
+        setSize(window.innerWidth);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      // Cleanup the event listener on component unmount
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <Box
-      height={"100vh"}
+      height={"120vh"}
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Stack sx={{ overflowY: "hidden" }}>
+      <Stack sx={{ overflowY: "hidden", marginTop : "50px", padding : "5px 20px"}}>
         <h1>About</h1>
         <ImageList
           sx={{
             ...customStyles,
             overflowY: "scroll",
-            width: "65vw",
-            height: "75vh",
-            border: "1px solid black",
+            width: size > 1200 ? "80vw" : "90vw" ,
+            height: "91vh",
+            // border: "1px solid black",
+            borderRadius : "10px"
           }}
           variant="quillted"
           cols={8}
           gap={5}
 
-          // rowHeight={120}
+          // rowHeight={90}
 
           // rowHeight={88}
         >
@@ -81,7 +99,7 @@ export default function About() {
               key={item.img}
               cols={item.cols || 1}
               rows={item.rows || 1}
-              sx={{ ...cardStyles, border: "1px solid black", height : "100%", width : "100%" }}
+              sx={{ ...cardStyles, border : "0.5px solid black", height : "100%", width : "100%", borderRadius : "10px" }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -89,6 +107,7 @@ export default function About() {
                 {...srcset(item.img, 90, item.rows, item.cols)}
                 alt={item.desc}
                 loading="lazy"
+                style={{borderRadius : "10px"}}
               />
 
               {hoveredIndex == index && (
@@ -100,7 +119,7 @@ export default function About() {
                     transform: "translate(-50%, -50%)",
                     transition : "all 0.3s ease-in",
                     color: "white",
-                    fontSize : "18px",
+                    fontSize : "16px",
                     textAlign: "left",
                     zIndex : 1
                   }}
