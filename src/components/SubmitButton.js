@@ -12,6 +12,7 @@ const Btn = styled(Button)`
   padding: 10px 20px;
   border: 0.5px solid black;
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  margin-top : 20px;
 
   &::after {
     content: "";

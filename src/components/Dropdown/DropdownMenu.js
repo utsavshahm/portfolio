@@ -32,7 +32,7 @@ function Dropdown(props) {
         width="100%"
         height="30vh"
         gap={3}
-        marginTop={10}
+        marginTop={9}
         fontSize={20}
         position={"fixed"}
         backgroundColor={'rgba(255, 255, 255, 0.95)'}

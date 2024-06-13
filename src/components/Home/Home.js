@@ -11,16 +11,16 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import Link from "@mui/material";
 
 function Home() {
   return (
     <Box
-      id="#hero-section"
-      sx={{ height: "100vh" }}
+      className="hero-section-container"
+      
       display={"flex"}
-      alignItems={"center"}
+      alignItems={"flex-start"}
       justifyContent={"space-around"}
+      // border={"2px solid red"}
     >
       <Stack
         direction={"row-reverse"}
@@ -29,6 +29,7 @@ function Home() {
         className="hero-section"
         width={"80vw"}
         flexWrap={"wrap"}
+        // bgcolor={'red'}
       >
         <Stack>
           <Box
@@ -36,10 +37,13 @@ function Home() {
               backgroundImage: `url(${heroimg})`,
               backgroundSize: "cover",
             }}
+            // border={"2px solid red"}
             className="hero-img"
           ></Box>
         </Stack>
-        <Stack direction={"column"}>
+        <Stack direction={"column"}
+          // border={"2px solid red"}
+        >
           <Stack
             direction={"column"}
             height={"fit-content"}

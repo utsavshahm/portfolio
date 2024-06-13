@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.about-page-heading{
+    font-size: 2rem;
+    letter-spacing: 3px;    
+
+}
+.about-page-text{
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+    color : rgb(130, 132, 150);
+    line-height: 1.3em;
+}
+
+@media screen and (max-width : 1000px) {
+    .about-page-heading{
+        font-size: 1.6rem;
+    }
+    .about-page-text{
+        font-size: 1.1rem;
+    }
+}
