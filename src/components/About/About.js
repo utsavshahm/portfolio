@@ -53,7 +53,7 @@ function About() {
             always eager to explore new technologies.
             <br />
             <br />
-            Below is a image grid containing everything about myself{" "}
+            Scroll below to find everything about myself{" "}
             {"\u{1F609}"}!
           </p>
         </Stack>
