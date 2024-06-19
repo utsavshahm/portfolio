@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.exp-page-heading {
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.exp-page-text {
+  font-size: 1.3rem;
+  letter-spacing: 1.2px;
+  color: rgb(130, 132, 150);
+  line-height: 1.3em;
+}
+
+.edu-card-desc h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.edu-card-desc p {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+.edu-card-time {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .exp-page-heading {
+    font-size: 1.8rem;
+  }
+
+  .exp-page-text {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .exp-page-heading {
+    font-size: 1.6rem;
+  }
+
+  .exp-page-text {
+    font-size: 1.1rem;
+  }
+
+  .edu-card-desc h3 {
+    font-size: 1.2rem;
+  }
+  .edu-card-desc p {
+    font-size: 1.05rem;
+  }
+  .edu-card-time {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .exp-page-heading {
+    font-size: 1.4rem;
+  }
+
+  .exp-page-text {
+    font-size: 1.05rem;
+  }
+}
+@media screen and (max-width : 920px) {
+    .exp-page-heading {
+        font-size: 1.7rem;
+    }
+
+    .exp-page-text {
+        font-size: 1.15rem;
+    }
+}
+@media screen and (max-width : 420px) {
+    .exp-page-heading {
+        font-size: 1.5rem;
+    }
+
+    .exp-page-text {
+        font-size: 1.05rem;
+    }
+}
+@media screen and (max-width: 450px) {
+  .edu-card-desc h3 {
+    font-size: 1.1rem;
+  }
+
+  .edu-card-desc p {
+    font-size: 1.0rem;
+  }
+
+  .edu-card-time {
+    font-size: 1.05rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .edu-card-desc h3 {
+    font-size: 1rem;
+  }
+
+  .edu-card-desc p {
+    font-size: 0.9rem;
+  }
+
+  .edu-card-time {
+    font-size: 0.95rem;
+  }
+}

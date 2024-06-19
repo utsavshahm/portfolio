@@ -67,7 +67,8 @@ export default function ImageGrid(props) {
           sx={{
             ...customStyles,
             overflowY: "scroll",
-            width: size > 1200 ? "80vw" : (size > 1100 ? "85vw" : "90vw") ,
+            // width: size > 1200 ? "80vw" : (size > 1100 ? "85vw" : "90vw") ,
+            width : "80vw",
             // height: "91vh",
             // border: "1px solid black",
             borderRadius : "10px"
@@ -85,7 +86,7 @@ export default function ImageGrid(props) {
               key={item.img}
               cols={item.cols || 1}
               rows={item.rows || 1}
-              sx={{ ...cardStyles, border : "0.5px solid black", borderRadius : "10px" }}
+              sx={{ ...cardStyles, border : "0.5px solid black", borderRadius : "10px", zIndex : 0 }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -108,7 +109,7 @@ export default function ImageGrid(props) {
                     fontSize : "16px",
                     textAlign: "left",
                     fontFamily: "Inter Tight, sans-serif",
-                    letterSpacing : '1px',
+                    letterSpacing: '1px',
                     zIndex : 1
                   }}
                 >

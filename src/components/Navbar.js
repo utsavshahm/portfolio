@@ -39,24 +39,12 @@ const NavLink = styled(Link)`
   }
 `;
 
-function Navbar() {
+function Navbar(props) {
+
+  const { size } = props;
   const [ham, setHam] = useState(0);
-  const [size, setSize] = useState(window.innerWidth);
 
   const [menu, setMenu] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setSize(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     if (size <= 920) {

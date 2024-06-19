@@ -99,7 +99,7 @@ function Home() {
 
             <Stack direction={"column"} gap={1}>
               <h3 className="greeting-text">{"\u{1F44B}"} Hey there, </h3>
-              <h2 className="name-text">It's Utsav Shah... </h2>
+              <h2 className="name-text">I'm Utsav Shah... </h2>
 
               <p className="about-text">
                 I'm a curious student pursuing a Bachelor's degree in Computer

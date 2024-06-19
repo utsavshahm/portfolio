@@ -4,22 +4,9 @@ import ImageGrid from "./ImageGrid";
 import HorizontalScroll from "./HorizontalScroll";
 import { Box, Stack } from "@mui/material";
 
-function About() {
-        const [size, setSize] = useState(window.innerWidth);
-
-        useEffect(() => {
-          const handleResize = () => {
-            setSize(window.innerWidth);
-          };
-
-          window.addEventListener("resize", handleResize);
-
-          // Cleanup the event listener on component unmount
-          return () => {
-            window.removeEventListener("resize", handleResize);
-          };
-        }, []);
-    
+function About(props) {
+  const { size } = props;
+  const ht = size[1]; const wd = size[0];
   return (
     <>
       <Box
@@ -28,10 +15,10 @@ function About() {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-                  gap: 2,
-                  //   marginTop : size > 1000 ? 8 : 20,
-                  marginTop : 4,
-          height : "30vh"
+          gap: 2,
+          //   marginTop : size > 1000 ? 8 : 20,
+          marginTop: wd > 920 ? 4 : ht <= 620 ? "50vh" : "20vh",
+          height: "30vh",
         }}
       >
         <Stack
@@ -40,7 +27,9 @@ function About() {
           gap={4}
           //   padding={2}
         >
-          <h3 className="about-page-heading">About Me</h3>
+          <h3 className="about-page-heading">
+            About <span style={{ fontWeight: 300 }}>Me</span>
+          </h3>
           <p className="about-page-text">
             Hi, I'm <strong>Utsav Shah</strong>, a <em>Fullstack Enthusiast</em>{" "}
             and third-year CSE student at <strong>IIT Goa</strong>. I have
@@ -53,13 +42,15 @@ function About() {
             always eager to explore new technologies.
             <br />
             <br />
-            Scroll below to find everything about myself{" "}
-            {"\u{1F609}"}!
+            Scroll below to find everything about myself {"\u{1F609}"}!
           </p>
         </Stack>
-
       </Box>
-          {size >= 920 ? <ImageGrid size={size} /> : <HorizontalScroll size={size} />}
+      {wd >= 920 ? (
+        <ImageGrid size={wd} />
+      ) : (
+        <HorizontalScroll size={wd} />
+      )}
     </>
   );
 }

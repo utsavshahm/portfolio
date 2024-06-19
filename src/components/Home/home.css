@@ -210,7 +210,7 @@
   }
 
   .about-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .name-text {
@@ -239,7 +239,8 @@
   }
 
   .hero-text {
-    width: 70vw;
+    width: 80vw;
   }
 }
+
 

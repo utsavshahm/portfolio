@@ -16,7 +16,7 @@ const HorizontalScroll = (props) => {
     <div>
       <div style={{ height: "15vh", marginTop : "75px" }}></div>
       <HorizontalScrollCarousel size={props.size} />
-      {/* <div style={{ height: "30vh" }}></div> */}
+      <div style={{ height: "60vh", marginBottom : "75px" }}></div>
     </div>
   );
 };
@@ -72,13 +72,16 @@ const Card = ({ card , size}) => {
     <div
       style={{
         height: "65vh",
-        width: size >= 550 ? `${card.width}vw` : `${card.widthModified}vw`,
+        width: size >= 550 ? `${card.width}vw` : `${card.widthModified + 5}vw`,
         // border: "1px solid grey",
         boxShadow: `rgba(0, 0, 0, 0.35) 0px 5px 15px`,
         borderRadius: "10px",
         display: "flex",
+        justifyContent: "center",
+        alignItems : "center",
         zIndex: -1,
         flexDirection: "column",
+        
       }}
     >
       <div

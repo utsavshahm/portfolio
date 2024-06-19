@@ -1,64 +1,66 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.about-page-heading{
+
+.projects-page-heading {
     font-size: 2rem;
-    letter-spacing: 3px;    
+    letter-spacing: 3px;
 
 }
-.about-page-text{
+
+.projects-page-text {
     font-size: 1.3rem;
-    letter-spacing: 1.2px;
-    color : rgb(130, 132, 150);
-    line-height: 1.3em;
+    letter-spacing: 1.3px;
+    color: rgb(130, 132, 150);
+    line-height: 1.4em;
+    word-spacing: 1px;
 }
 
-@media screen and (max-width : 1400px) {
-    .about-page-heading {
+@media screen and (max-width : 1400px ){
+    .projects-page-heading {
         font-size: 1.8rem;
     }
-
-    .about-page-text {
+        
+    .projects-page-text {
         font-size: 1.2rem;
     }
 }
+
 @media screen and (max-width : 1200px) {
-    .about-page-heading {
+    .projects-page-heading {
         font-size: 1.6rem;
     }
-
-    .about-page-text {
+        
+    .projects-page-text {
         font-size: 1.1rem;
     }
 }
-
 @media screen and (max-width : 1000px) {
-    .about-page-heading {
+    .projects-page-heading {
         font-size: 1.4rem;
     }
 
-    .about-page-text {
+    .projects-page-text {
         font-size: 1.05rem;
     }
 }
 @media screen and (max-width : 920px) {
-    .about-page-heading {
+    .projects-page-heading {
         font-size: 1.7rem;
     }
 
-    .about-page-text {
+    .projects-page-text {
         font-size: 1.15rem;
     }
 }
 @media screen and (max-width : 420px) {
-    .about-page-heading {
+    .projects-page-heading {
         font-size: 1.5rem;
     }
 
-    .about-page-text {
+    .projects-page-text {
         font-size: 1.05rem;
     }
 }
-
