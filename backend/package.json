@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "module": "true",
+  "description": "simple backend for form submission on portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "node index.js"
+  },
+  "author": "Utsav",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
