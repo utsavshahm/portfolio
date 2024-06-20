@@ -1,0 +1,120 @@
+*{
+    font-family: 'Inter Tight', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.contact-page-heading{
+    font-size: 2rem;
+    margin-bottom: 30px;
+
+}
+
+.input-field{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: rgb(232, 232, 232);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.contact-sub-btn{
+    width: 300px;
+    display: flex;
+    gap : 10px;
+    align-items: center;
+    justify-content: center;
+}
+.textarea{
+    width: 450px;
+    height: 200px;
+    resize: none;
+}
+
+
+.footer-text{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+}
+.social-media-icons-footer {
+  font-size: 2em;
+  color: rgb(130, 132, 150);
+  transition: all 0.2s ease-in;
+}
+
+.social-media-icons-footer:hover {
+  cursor: pointer;
+}
+.social-media-icons-footer.lin:hover {
+  color: #0077b5;
+}
+.social-media-icons-footer.ig:hover {
+  color: #e1306c;
+}
+.social-media-icons-footer.mail:hover {
+  color: #249ee4;
+}
+.social-media-icons-footer.git:hover {
+  color: black;
+}
+
+
+@media screen and (max-width : 1400px) {
+    .contact-page-heading {
+        font-size: 1.8rem;
+    }
+    .textarea{
+        width: 425px;
+    }
+    .contact-sub-btn{
+        width: 275px;
+    }
+}
+@media screen and (max-width : 1200px) {
+    .contact-page-heading {
+        font-size: 1.6rem;
+    }
+    .textarea{
+        width: 350px;
+    }
+    .contact-sub-btn{
+        width: 225px;
+    }
+}
+
+@media screen and (max-width : 1000px) {
+    .contact-page-heading {
+        font-size: 1.4rem;
+    }
+    .textarea{
+        width: 300px;
+    }
+    .contact-sub-btn{
+        width: 185px;
+    }
+}
+@media screen and (max-width : 920px) {
+    .contact-page-heading {
+        font-size: 1.7rem;
+        margin-top: 200px;
+    }
+    .textarea{
+        width: 70vw;
+    }
+    .contact-sub-btn{
+        width: 30vw;
+    }
+
+}
+@media screen and (max-width : 420px) {
+    .contact-page-heading {
+        font-size: 1.5rem;
+    }
+    .textarea{
+        width: 70vw;
+    }
+
+}
+

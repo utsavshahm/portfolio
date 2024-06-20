@@ -40,12 +40,17 @@ const NavLink = styled(Link)`
 `;
 
 function Navbar(props) {
-
+  
   const { size } = props;
   const [ham, setHam] = useState(0);
-
+  
   const [menu, setMenu] = useState(0);
-
+  
+  const handleNavClick = (event, target) => {
+    event.preventDefault();
+    document.querySelector(target).scrollIntoView({ behavior: "smooth" });
+    setMenu(0); // Close the menu on mobile after clicking
+  };
   useEffect(() => {
     if (size <= 920) {
       // Compare with a number, not a string
@@ -86,11 +91,23 @@ function Navbar(props) {
           fontSize={20}
           display={ham ? "none" : "flex"}
         >
-          <NavLink> Home </NavLink>
-          <NavLink to={"#about"}> About </NavLink>
-          <NavLink> Experience </NavLink>
-          <NavLink> Projects </NavLink>
-          <NavLink> Contact </NavLink>
+          <NavLink onClick={(e) => handleNavClick(e, "#home")}> Home </NavLink>
+          <NavLink onClick={(e) => handleNavClick(e, "#about")}>
+            {" "}
+            About{" "}
+          </NavLink>
+          <NavLink onClick={(e) => handleNavClick(e, "#projects")}>
+            {" "}
+            Projects{" "}
+          </NavLink>
+          <NavLink onClick={(e) => handleNavClick(e, "#experience")}>
+            {" "}
+            Experience{" "}
+          </NavLink>
+          <NavLink onClick={(e) => handleNavClick(e, "#contact")}>
+            {" "}
+            Contact{" "}
+          </NavLink>
         </Stack>
 
         <Stack
@@ -108,11 +125,20 @@ function Navbar(props) {
       </Stack>
 
       <DropdownMenu state={menu}>
-        <NavLink> Home </NavLink>
-        <NavLink to={"#about"}> About </NavLink>
-        <NavLink> Experience </NavLink>
-        <NavLink> Projects </NavLink>
-        <NavLink> Contact </NavLink>
+        <NavLink onClick={(e) => handleNavClick(e, "#home")}> Home </NavLink>
+        <NavLink onClick={(e) => handleNavClick(e, "#about")}> About </NavLink>
+        <NavLink onClick={(e) => handleNavClick(e, "#projects")}>
+          {" "}
+          Projects{" "}
+        </NavLink>
+        <NavLink onClick={(e) => handleNavClick(e, "#experience")}>
+          {" "}
+          Experience{" "}
+        </NavLink>
+        <NavLink onClick={(e) => handleNavClick(e, "#contact")}>
+          {" "}
+          Contact{" "}
+        </NavLink>
       </DropdownMenu>
     </>
   );

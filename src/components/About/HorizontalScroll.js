@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import ahmd from "../../assets/Ahmedabad-city.jpg";
 import iitgoa2 from "../../assets/iitgoalogo.png";
 import iitgoa from "../../assets/iitgoalogo2.webp";
@@ -16,23 +16,11 @@ const HorizontalScroll = (props) => {
     <div>
       <div style={{ height: "15vh", marginTop : "75px" }}></div>
       <HorizontalScrollCarousel size={props.size} />
-      <div style={{ height: "60vh", marginBottom : "75px" }}></div>
+      <div style={{ height: "60vh", marginBottom : "125px" }}></div>
     </div>
   );
 };
 
-const linkStyle = {
-  // color: "black", 
-  textDecoration: "none", 
-  position: "relative", 
-  content: "", 
-  height: "2px", 
-  width : "100%", 
-  background: "linear-gradient(to right, red, orange)",
-  backgroundClip: "text",
-  color: `rgba(0, 0, 0, 1)`,
-  
-}
 const HorizontalScrollCarousel = (props) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -130,6 +118,7 @@ const Card = ({ card , size}) => {
           <a
             href="https://github.com/utsavshahm"
             target="_blank"
+            rel="noreferrer"
             style={{
               textDecoration: "bold",
               position: "relative",

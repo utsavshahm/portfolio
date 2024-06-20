@@ -41,7 +41,7 @@ const Btn = styled(Button)`
   }
 `;
 function SubmitButton(props) {
-  return <Btn variant="outlined" className={props.className}>{props.children}</Btn>;
+  return <Btn variant="outlined" className={props.className} type="submit">{props.children}</Btn>;
 }
 
 export default SubmitButton;
