@@ -35,7 +35,7 @@ function EducationCard(props) {
             gap={2}
           >
             <Stack direction={"column"} className="edu-icon">
-              {svg == false ? (
+              {svg === false ? (
                 <FontAwesomeIcon
                   icon={icon}
                   fontSize={"1.5em"}
