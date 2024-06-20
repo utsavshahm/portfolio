@@ -49,7 +49,7 @@ function Contact(props) {
     }
     const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/contact`, data)
 
-    if (response.data.success=='ok') {
+    if (response.data.success==='ok') {
       alert("Message sent successfully!")
     }
     else {

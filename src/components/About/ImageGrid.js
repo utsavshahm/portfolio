@@ -53,7 +53,7 @@ const cardStyles = {
   }
 }
 export default function ImageGrid(props) {
-  const { size } = props;
+  // const { size } = props;
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <Box
@@ -97,7 +97,7 @@ export default function ImageGrid(props) {
                 style={{borderRadius : "10px"}}
               />
 
-              {hoveredIndex == index && (
+              {hoveredIndex === index && (
                 <Box
                   sx={{
                     position: "absolute",

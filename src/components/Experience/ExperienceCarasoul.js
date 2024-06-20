@@ -4,7 +4,7 @@ import {
   faSchool,
   faUserTie,
 } from "@fortawesome/free-solid-svg-icons";
-import { Box, Grid, Stack } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import webanavLogo from "../../assets/black_logo_w.svg";
 import React, { useState } from "react";
 import EducationCard from "./EducationCard";
@@ -16,8 +16,6 @@ import python from '../../assets/python.png'
 import redux from '../../assets/redux.png'
 import react from '../../assets/react.png'
 import node from '../../assets/nodejs.png'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faNodeJs, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
 
 const educationDetails = [
   {
@@ -152,7 +150,7 @@ function ExperienceCarasoul(props) {
             <h2 style={{ fontWeight: 500, fontSize : size >=1000 ? "28px" : (size>=450 ? "24px" : "20px") }}>{heads[selectedCard - 1]}</h2>
           </Stack>
           <Grid container columns={4} height={"80%"}>
-            {selectedCard != 3 ? (
+            {selectedCard !== 3 ? (
               data[selectedCard - 1].map((eduItem) => {
                 return <EducationCard details={eduItem} key={eduItem.id} />;
               })
@@ -179,7 +177,7 @@ function Card(props) {
       sx={{
         fontSize: size >= 450 ? "1.2rem" : "1rem",
         boxShadow:
-          selectedCard != id
+          selectedCard !== id
             ? `rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px`
             : `rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset`,
         fontFamily: "Inter Tight, sans-serif",
@@ -231,7 +229,7 @@ function SkillCard(props) {
                   alignItems={"center"}
                   justifyContent={"center"}
                 >
-                  <img src={icon.img} height={size >= 1000 ? "70px" : (size >=450 ? "55px" : "45px") } />
+                  <img src={icon.img} height={size >= 1000 ? "70px" : (size >=450 ? "55px" : "45px") } alt="" />
                 </Grid>
               );
             })}

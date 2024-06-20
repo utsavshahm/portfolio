@@ -1,6 +1,5 @@
 import { Box, Stack } from '@mui/material';
 import React from 'react'
-import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faInstagram,
@@ -11,7 +10,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 function Footer(props) {
   const wd = props.size[0];
-  const ht = props.size[1]
+  // const ht = props.size[1]
   return (
     <Box
       

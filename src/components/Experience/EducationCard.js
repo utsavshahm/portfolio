@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Grid, Stack } from "@mui/material";
-import webanavLogo from "../../assets/black_logo_w.svg";
 
 function EducationCard(props) {
   
@@ -12,7 +11,7 @@ function EducationCard(props) {
         item
         md={gridSize}
         xs={4}
-        height={type=="exp" ? "25%" : "33%"}
+        height={type==="exp" ? "25%" : "33%"}
         // border={1}
         display={"flex"}
 
@@ -30,7 +29,7 @@ function EducationCard(props) {
         >
           <Grid
             item
-            xs={gridSize == 4 ? 3 : 4}
+            xs={gridSize === 4 ? 3 : 4}
             display={"flex"}
             direction={"row"}
             gap={2}
@@ -43,7 +42,7 @@ function EducationCard(props) {
                   color="#0077b5"
                 />
               ) : (
-                <img src={icon} height={"20px"} />
+                <img src={icon} height={"20px"} alt="logo" />
               )}
             </Stack>
             <Stack
@@ -65,7 +64,7 @@ function EducationCard(props) {
             </Stack>
           </Grid>
 
-          {gridSize == 4 ? (
+          {gridSize === 4 ? (
             <Grid
               item
               xs={1}
