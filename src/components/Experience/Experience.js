@@ -17,7 +17,7 @@ function Experience(props) {
             flexDirection: "column",
             gap: 10,
             //   marginTop : size > 1000 ? 8 : 20,
-            marginTop: wd > 920 ? 2 : ht > 800 ? "88vh" : "120vh",
+            marginTop: wd > 920 ? 2 : ht > 860 ? (ht > 890 ? "91vh" : "88vh") : "120vh",
             height: "100vh",
           }}
         >
