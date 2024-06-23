@@ -111,7 +111,7 @@ function Home() {
                   challenging projects.{" "}
                 </p>
                 <a
-                  href="https://drive.google.com/file/d/1DiRynVhZqGtArcIV1HgLMeiFBuPc_jy8/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1_tRTzzPoaZt7KUowGIXajJw980PNSqe_/view?usp=sharing"
                   rel="noreferrer"
                   target="_blank"
                 >
