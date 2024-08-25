@@ -16,7 +16,7 @@ function Projects(props) {
       img: typeit,
       name: "TypeIT - A Typing Website",
       desc: "TypeIT - A typing website which enables you to test your typing speed against time. This is a fullstack application made above MERN stack. ",
-      link : "https://utsavshah.vercel.app"
+      link : "https://my-typeit.vercel.app"
 
     },
     {
